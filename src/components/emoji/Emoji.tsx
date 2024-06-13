@@ -10,7 +10,7 @@ export const Emoji: React.FC<EmojiProps> = ({name, link, width, height}) => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
 
-      if(screenWidth > 640) {
+      if(screenWidth > 1024) {
         setDisplayNameLength(16);
       } else {
         setDisplayNameLength(10);
@@ -37,7 +37,7 @@ export const Emoji: React.FC<EmojiProps> = ({name, link, width, height}) => {
       }>
         <EmojiImage link={link} name={name} width={width} height={height} />
       </Suspense>
-      <span className='mt-2 my-4 text-xs'>{displayName}</span>
+      <span className='mt-2 my-4 text-xs select-none'>{displayName}</span>
     </div>
   );
 }
