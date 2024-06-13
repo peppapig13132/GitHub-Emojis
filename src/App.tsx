@@ -26,10 +26,12 @@ function App() {
         GitHub Emojis
       </h2>
 
-      <div className='flex flex-wrap w-full justify-items-center'>
-        {
-          emojis.map((emoji, key) => <Emoji name={emoji.name} link={emoji.link} width={50} height={50} key={key} />)
-        }
+      <div className='container'>
+        <div className='grid xl:grid-cols-12 md:grid-cols-8 sm:grid-cols-6 grid-cols-4 gap-4'>
+          {
+            emojis.map((emoji, key) => <Emoji name={emoji.name} link={emoji.link} width={50} height={50} key={key} />)
+          }
+        </div>
       </div>
       <p className='my-8 text-slate-700'>Made with ❤️ by <a target='_blank' rel='noreferrer' href='https://github.com/peppapig13132'>Pepp</a></p>
     </div>
