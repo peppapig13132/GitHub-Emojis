@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className='flex flex-col items-center min-h-screen'>
-      <h2 className='text-6xl mt-12 mb-8 text-slate-700'>
+      <h2 className='text-6xl mt-12 mb-8 text-slate-700 select-none'>
         GitHub Emojis
       </h2>
 
