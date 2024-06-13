@@ -1,3 +1,7 @@
+export interface HeroiconProps {
+  icon: string;
+}
+
 export interface EmojiData {
   name: string;
   link: string;
