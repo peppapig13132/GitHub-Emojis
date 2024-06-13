@@ -22,12 +22,12 @@ function App() {
 
   return (
     <div className='flex flex-col items-center min-h-screen'>
-      <h2 className='text-4xl mt-12 mb-8 text-slate-700'>
+      <h2 className='text-6xl mt-12 mb-8 text-slate-700'>
         GitHub Emojis
       </h2>
 
       <div className='container'>
-        <div className='grid xl:grid-cols-12 md:grid-cols-8 sm:grid-cols-6 grid-cols-4 gap-4'>
+        <div className='mx-2 grid xl:grid-cols-12 md:grid-cols-8 sm:grid-cols-6 grid-cols-4 gap-4'>
           {
             emojis.map((emoji, key) => <Emoji name={emoji.name} link={emoji.link} width={50} height={50} key={key} />)
           }
