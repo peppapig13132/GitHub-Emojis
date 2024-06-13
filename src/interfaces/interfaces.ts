@@ -13,3 +13,7 @@ export interface EmojiProps {
   width: number;
   height: number;
 }
+
+export interface CopyToClipboardProps {
+  text: string;
+}

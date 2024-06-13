@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeroiconProps } from '../interfaces/interfaces'
+import { HeroiconProps } from '../../interfaces/interfaces'
 
 export const Heroicon: React.FC<HeroiconProps> = ({icon}) => {
   const icons_map: Record<string, JSX.Element> = {};
