@@ -4,6 +4,7 @@ import { getEmojis } from './services/githubApiService';
 import { Emoji } from './components/emoji/Emoji';
 import { EmojiData } from './interfaces/interfaces';
 import { useInView } from 'react-intersection-observer';
+import GithubCorner from 'react-github-corner';
 
 function App() {
   const [emojis, setEmojis] = useState<EmojiData[]>([]);
@@ -37,7 +38,7 @@ function App() {
     setTimeout(() => {
       setVisibleEmojis(prev => [
         ...prev,
-        ...emojis.slice(prev.length, prev.length + 24),
+        ...emojis.slice(prev.length, prev.length + 36),
       ]);
       setLoading(false);
     }, 200);
@@ -66,7 +67,12 @@ function App() {
         <div ref={ref}></div>
         {loading && <div className='w-full my-4 text-slate-700 text-center'><p>Loading more emojis...</p></div>}
       </div>
-      <p className='my-8 text-slate-700'>Made with ❤️ by <a target='_blank' rel='noreferrer' href='https://github.com/peppapig13132'>Pepp</a></p>
+      <p className='my-8 text-slate-700 select-none'>Made with ❤️ by <a target='_blank' rel='noreferrer' href='https://github.com/peppapig13132'>Pepp</a></p>
+      <GithubCorner
+        href='https://github.com/peppapig13132/GitHub-Emojis'
+        size={120}
+        bannerColor='#334155'
+      />
     </div>
   );
 }
